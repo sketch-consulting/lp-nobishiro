@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja" style="overflow-x:hidden;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用費をかけても「また辞めた」が繰り返される。｜伸びしろ調査 無料</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:"Noto Sans JP",sans-serif;background:#060E1C;color:#E8E4DC;-webkit-font-smoothing:antialiased;font-size:17px;overflow-x:hidden;width:100%;overflow-x:hidden;}
+
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 4px 14px rgba(30,138,60,0.4)}50%{transform:scale(1.02);box-shadow:0 6px 22px rgba(30,138,60,0.55)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+
+/* TOP BANNER */
+.top-banner{background:#C49A22;color:#0D1B35;text-align:center;padding:10px 12px;font-size:13px;font-weight:900;letter-spacing:0.02em;position:sticky;top:0;z-index:300;}
+
+/* STICKY */
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:200;background:#060E1C;border-top:2px solid #C49A22;padding:10px 20px 14px;display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:16px;}
+.sticky-txt{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.5;}
+.sticky-txt strong{color:#F0D080;display:block;font-size:13px;}
+.sticky-btn{background:#1E8A3C;color:white;font-size:13px;font-weight:900;padding:12px 16px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;animation:pulse 2.5s infinite;text-decoration:none;}
+
+/* LAYOUT */
+.btn-green{display:block;width:100%;background:#1E8A3C;color:white;font-size:18px;font-weight:900;text-align:center;word-break:keep-all;padding:18px;border-radius:8px;border:none;text-decoration:none;animation:pulse 2.8s infinite;}
+
+/* FV CATCH FULLWIDTH */
+.fv-catch-fullwidth{background:#0D1B35;padding:48px 24px 40px;text-align:center;border-bottom:3px solid rgba(196,154,34,0.2);position:relative;overflow:hidden;padding-left:20px;padding-right:20px;}
+.fv-catch-fullwidth::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#C49A22,rgba(196,154,34,0.1));}
+.catch-pre-fw{font-size:20px;font-weight:700;color:rgba(255,255,255,0.45);margin-bottom:12px;}
+.catch-big-fw{font-family:"Noto Serif JP",serif;font-size:clamp(36px,11vw,110px);font-weight:700;color:#FF6B6B;line-height:1.0;display:inline-block;border-bottom:8px solid rgba(255,107,107,0.5);padding-bottom:6px;margin-bottom:16px;letter-spacing:-0.02em;}
+.catch-mid-fw{font-family:"Noto Serif JP",serif;font-size:clamp(20px,5.5vw,52px);font-weight:700;color:white;line-height:1.4;}
+
+/* FV */
+.fv{background:#0D1B35;padding:48px 0 0;position:relative;overflow:hidden;overflow:hidden;}
+.fv::after{content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,34,0.08) 0%,transparent 70%);pointer-events:none;}
+.fv-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:block;position:relative;z-index:2;box-sizing:border-box;width:100%;}
+
+
+.fv-left{padding-bottom:0;}
+.catch-pre{font-size:14px;font-weight:500;color:rgba(255,255,255,0.5);margin-bottom:6px;}
+.catch-big{font-family:"Noto Serif JP",serif;font-size:clamp(40px,6vw,64px);font-weight:700;color:#FF6B6B;line-height:1.05;display:inline-block;border-bottom:5px solid rgba(255,107,107,0.4);padding-bottom:4px;margin-bottom:10px;}
+.catch-mid{font-family:"Noto Serif JP",serif;font-size:clamp(22px,3.5vw,32px);font-weight:700;color:white;line-height:1.45;margin-bottom:24px;}
+.gold-u{border-bottom:2.5px solid #C49A22;padding-bottom:2px;}
+.b-points{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;overflow:hidden;width:100%;;width:100%;max-width:100%;}
+.b-point{background:rgba(255,255,255,0.05);border-left:3px solid #C49A22;border-radius:0 8px 8px 0;padding:16px 18px;overflow:hidden;box-sizing:border-box;width:100%;max-width:100%;box-sizing:border-box;;width:100%;max-width:100%;}
+.b-point-text{word-break:keep-all;font-size:17px;color:rgba(255,255,255,0.9);line-height:1.7;font-weight:500;overflow-wrap:break-word;width:100%;overflow-wrap:break-word;}
+.b-point-text em{color:#FF8C8C;font-style:normal;font-weight:700;}
+.b-divider{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding:20px 0;}
+.b-divider-line{flex:1;height:2px;background:rgba(196,154,34,0.3);}
+.b-divider-text{font-size:clamp(18px,2.5vw,26px);color:#C49A22;font-weight:900;white-space:normal;text-align:center;letter-spacing:0.02em;}
+
+/* FV RIGHT OFFER */
+.fv-right{position:static;}
+.offer-card{background:white;border:1.5px solid rgba(196,154,34,0.45);border-radius:12px;overflow:hidden;margin-bottom:0;}
+.offer-card-head{background:#C49A22;padding:20px 18px;text-align:center;}
+.offer-card-head-txt{font-size:18px;font-weight:900;color:#0D1B35;text-align:center;}
+.offer-card-body{padding:20px;background:#FFFFFF;}
+.scarcity-big{text-align:center;padding:16px 0 14px;border-bottom:1px solid #E5E5E5;margin-bottom:18px;background:#FFFFFF;}
+.sc-num{font-family:"Noto Serif JP",serif;font-size:100px;font-weight:700;color:#C0392B;line-height:1;}
+.sc-unit{font-size:24px;font-weight:900;color:#1A1A1A;}
+.sc-label{font-size:14px;color:#888;margin-top:4px;}
+.scarcity-mini{display:flex;align-items:center;gap:8px;background:rgba(196,154,34,0.08);border:1px solid rgba(196,154,34,0.3);border-radius:6px;padding:12px 16px;margin-top:12px;font-size:13px;font-weight:700;color:#1A1A1A;}
+.bdot{width:8px;height:8px;border-radius:50%;background:#C49A22;flex-shrink:0;animation:blink 1.3s infinite;}
+
+/* SECTIONS */
+section{padding:64px 0;}
+.sec-inner{max-width:1100px;margin:0 auto;padding:0 24px;max-width:100%;box-sizing:border-box;}
+@media(max-width:768px){section{padding:48px 0;}.sec-inner{padding:0 16px;max-width:100%;box-sizing:border-box;}}
+.sec-eye{font-size:11px;font-weight:700;letter-spacing:.14em;color:#C49A22;text-transform:uppercase;margin-bottom:8px;}
+.sec-title{font-family:"Noto Serif JP",serif;font-size:clamp(20px,4.5vw,32px);font-weight:700;line-height:1.55;color:white;margin-bottom:10px;}
+.sec-title em{color:#FF8C8C;font-style:normal;}
+.sec-lead{font-size:17px;color:rgba(255,255,255,0.6);word-break:keep-all;line-height:1.9;margin-bottom:28px;padding-right:8px;white-space:normal;overflow-wrap:break-word;}
+.divider{width:40px;height:3px;background:#C49A22;border-radius:2px;margin:10px 0 24px;}
+
+/* PROBLEM */
+.problem{background:#111E38;}
+.check-intro{font-size:16px;font-weight:700;color:#FF8C8C;margin-bottom:10px;}
+.checklist{list-style:none;border:1.5px solid rgba(196,154,34,0.3);border-radius:8px;overflow:hidden;margin-bottom:20px;}
+.checklist li{padding:16px 18px 16px 46px;border-bottom:1px solid rgba(255,255,255,0.06);position:relative;font-size:17px;line-height:1.6;color:rgba(255,255,255,0.85);}
+.checklist li:last-child{border-bottom:none;}
+.checklist li::before{content:"□";position:absolute;left:16px;top:16px;font-size:16px;color:rgba(196,154,34,0.5);}
+.danger-box{background:rgba(192,57,43,0.1);border:1.5px solid rgba(192,57,43,0.35);border-radius:10px;padding:24px;display:flex;gap:14px;align-items:flex-start;}
+.danger-icon{font-size:24px;flex-shrink:0;}
+.danger-txt{font-size:17px;line-height:1.85;color:rgba(255,200,200,0.9);}
+.danger-txt .danger-heading{color:#FF8C8C;font-size:20px;display:block;margin-bottom:8px;font-weight:900;}
+
+/* ROOT CAUSE */
+.root{background:#0D1B35;}
+.cause-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:768px){.cause-grid{grid-template-columns:1fr;}}
+.cause-card{background:rgba(255,255,255,0.05);border-radius:10px;padding:22px;border-left:4px solid #C49A22;}
+.cause-num{font-size:11px;font-weight:700;color:#C49A22;letter-spacing:.1em;margin-bottom:6px;}
+.cause-title{font-size:18px;font-weight:700;color:white;margin-bottom:8px;}
+.cause-body{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.85;}
+.cause-body em{color:#FF8C8C;font-style:normal;font-weight:700;}
+.insight-box{background:rgba(196,154,34,0.1);border:1px solid rgba(196,154,34,0.3);border-radius:10px;padding:22px;margin-top:28px;}
+.insight-box p{font-size:17px;line-height:1.9;color:rgba(255,255,255,0.85);}
+.insight-box strong{color:#F0D080;}
+
+/* LIMIT */
+.limit{background:#111E38;}
+.limit-box{background:rgba(255,255,255,0.04);border:2px solid #C49A22;border-radius:12px;overflow:hidden;margin-bottom:24px;}
+.limit-head{background:#C49A22;padding:20px 24px;text-align:center;}
+.limit-head h3{font-size:20px;font-weight:900;color:#0D1B35;}
+.limit-body{padding:28px 24px;}
+.limit-count{text-align:center;margin-bottom:24px;padding-top:8px;}
+.limit-num{font-family:"Noto Serif JP",serif;font-size:100px;font-weight:700;color:#C49A22;line-height:1;}
+.limit-unit{font-size:24px;font-weight:900;color:white;}
+.limit-rules{list-style:none;}
+.limit-rules li{font-size:18px;line-height:1.8;padding:14px 0 14px 24px;position:relative;border-bottom:1px solid rgba(196,154,34,0.15);color:rgba(255,255,255,0.8);}
+.limit-rules li:last-child{border-bottom:none;}
+.limit-rules li::before{content:"!";position:absolute;left:0;color:#FF8C8C;font-weight:900;}
+.limit-rules li strong{color:#FF8C8C;}
+.limit-cta-txt{font-size:20px;font-weight:700;color:white;line-height:1.9;margin-bottom:20px;}
+
+/* BENEFIT */
+.benefit{background:#0D1B35;}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media(max-width:768px){.benefit-grid{grid-template-columns:1fr;}}
+.benefit-card{background:rgba(255,255,255,0.05);border-radius:10px;padding:22px;border-left:3px solid #C49A22;}
+.benefit-ttl{font-size:18px;font-weight:700;color:white;margin-bottom:8px;}
+.benefit-desc{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.85;}
+
+/* FINAL */
+.final{background:#060E1C;padding:72px 0 100px;}
+.final-inner{display:flex;flex-direction:column;gap:32px;max-width:640px;margin:0 auto;width:100%;box-sizing:border-box;}
+
+.final-box{background:rgba(255,255,255,0.05);border:1.5px solid rgba(196,154,34,0.4);border-radius:12px;overflow:hidden;max-width:100%;overflow:hidden;}
+.final-box-head{background:#C49A22;padding:18px 20px;text-align:center;}
+.final-box-head h3{font-size:18px;font-weight:900;color:#0D1B35;}
+.final-box-body{padding:22px;overflow:hidden;padding:20px;overflow:hidden;box-sizing:border-box;}
+.final-warn{background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.3);border-radius:8px;padding:14px 16px;font-size:14px;color:rgba(255,180,180,0.9);line-height:1.8;text-align:center;word-break:keep-all;margin-top:12px;overflow-wrap:break-word;word-break:normal;}
+.final-warn strong{color:#FF8C8C;display:block;margin-bottom:2px;}
+
+footer{background:#020810;color:rgba(255,255,255,0.25);font-size:11px;text-align:center;padding:22px 20px 80px;}
+footer a{color:inherit;}
+
+@media(max-width:480px){
+  html,body{overflow-x:hidden;}
+  .b-point-text{font-size:15px;overflow-wrap:break-word;}
+  .b-divider-text{font-size:15px;}
+  .catch-big-fw{font-size:clamp(32px,10vw,80px);}
+  .catch-mid-fw{font-size:clamp(18px,6vw,40px);}
+  .reason-txt{font-size:16px;line-height:1.7;}
+  .reason-lbl{font-size:12px;}
+  .bubble{font-size:14px;padding:12px 14px;}
+  .reason-card{padding:16px 14px;}
+  .sec-title{font-size:20px;}
+  .sec-lead{font-size:15px;}
+  .scarcity-mini{font-size:12px;padding:10px 12px;}
+  .btn-green{font-size:15px;padding:16px 12px;}
+  .final-box-body{padding:16px;}
+  .final-warn{font-size:12px;padding:10px 12px;overflow-wrap:break-word;}
+  .fv-inner,.b-points,.b-point{width:100%;max-width:100%;box-sizing:border-box;;width:100%;max-width:100%;}
+  .sec-inner{padding-left:16px;padding-right:16px;width:100%;box-sizing:border-box;}
+
+  .top-banner{font-size:12px;padding:8px 10px;letter-spacing:0;}
+  .sticky{padding:8px 12px 10px;gap:8px;}
+  .sticky-txt{font-size:11px;}
+  .sticky-txt strong{font-size:12px;}
+  .sticky-btn{font-size:12px;padding:11px 14px;}
+  .catch-big-fw{font-size:clamp(36px,11vw,110px);}
+  .catch-mid-fw{font-size:clamp(20px,5.5vw,52px);}
+  .sec-title{font-size:22px;}
+  .b-divider-text{font-size:16px;}
+  .checklist li{font-size:15px;padding:13px 14px 13px 38px;}
+  .cause-title{font-size:16px;}
+  .cause-body{font-size:14px;}
+  .benefit-ttl{font-size:16px;}
+  .benefit-desc{font-size:14px;}
+  .limit-rules li{font-size:16px;}
+  .btn-green{font-size:15px;padding:16px;}
+}
+
+@media(min-width:769px){
+  .fv-inner{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:start;}
+  .fv-left{margin-bottom:0;}
+  .fv-right{margin-top:0;}
+}
+@media(max-width:768px){
+  .fv-inner{padding:0 16px;}
+  .fv-left{width:100%;margin-bottom:32px;}
+  .fv-right{width:100%;}
+  .b-point,.b-points{width:100%;box-sizing:border-box;}
+  .b-point-text{overflow-wrap:break-word;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-banner">🎯 限定10社・無料｜自社の伸びしろ調査、今すぐ依頼できます</div>
+<div class="sticky">
+  <div class="sticky-txt"><strong>限定10社・無料｜伸びしろ調査</strong>残り枠わずか・定員次第終了</div>
+  <a href="#cta" class="sticky-btn">無料で依頼する</a>
+</div>
+
+<!-- FV CATCH FULLWIDTH -->
+<div class="fv-catch-fullwidth">
+  <div class="catch-pre-fw">採用費をかけても、</div>
+  <div class="catch-big-fw">「また辞めた」</div>
+  <div class="catch-mid-fw">が繰り返される。</div>
+</div>
+
+<!-- FV -->
+<section class="fv" style="padding:48px 0 0;">
+  <div class="fv-inner">
+    <div class="fv-left">
+      <div class="b-points">
+        <div class="b-point"><div class="b-point-text">求人を出すたびに<em>お金が消える</em>のに、手応えがない</div></div>
+        <div class="b-point"><div class="b-point-text">採用できても<em>また辞めた</em>が繰り返される</div></div>
+        <div class="b-point"><div class="b-point-text">何から変えればいいか、<em>わからないまま</em>時間が経つ</div></div>
+      </div>
+      <div class="b-divider">
+        <div class="b-divider-line"></div>
+        <div class="b-divider-text">変えるのは「やり方」ではなく「構造」です</div>
+        <div class="b-divider-line"></div>
+      </div>
+    </div>
+    <div class="fv-right">
+      <div class="offer-card" style="background:#FFFFFF;overflow:hidden;border-radius:12px;border:1.5px solid rgba(196,154,34,0.45);">
+        <div class="offer-card-head"><div class="offer-card-head-txt">自社の伸びしろ、無料で調べます</div></div>
+        <div class="offer-card-body" style="background:#FFFFFF !important;padding:20px;">
+          <div class="scarcity-big" style="background:#FFFFFF;">
+            <div class="sc-num">10</div>
+            <div class="sc-unit">社限定・完全無料</div>
+            <div class="sc-label">伸びしろ調査を無料で実施します</div>
+          </div>
+          <a href="#cta" class="btn-green">自社の伸びしろ調査を無料で依頼する →</a>
+          <div class="scarcity-mini"><div class="bdot"></div><span>残り枠わずか。定員に達し次第、受付を終了します。</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="sec-inner">
+    <div class="sec-eye">PROBLEM</div>
+    <h2 class="sec-title">採用、本当に<em>うまく</em>いっていますか？</h2>
+    <div class="divider"></div>
+    <p class="sec-lead">「採用はきちんとできている」と思っていても、実態は違うことがよくあります。次の項目をチェックしてみてください。</p>
+    <div class="check-intro">⚠ 心当たりはありますか</div>
+    <ul class="checklist">
+      <li>「また辞めた」が、今年も繰り返された</li>
+      <li>採用費が膨らんでいるのに、手応えがない</li>
+      <li>採用担当者が本業との兼務で、限界に近い</li>
+      <li>求人を出しても、応募が来ない月がある</li>
+      <li>何を変えればいいか、わからないまま時間が経つ</li>
+    </ul>
+    <div class="danger-box">
+      <span class="danger-icon">⚠️</span>
+      <div class="danger-txt">
+        <strong class="danger-heading">1つでも当てはまれば要注意。</strong>
+        それは「採用担当者の問題」ではありません。採用の<strong>「構造」</strong>に手が入っていないサインです。やり方を変えても、構造が変わらなければ同じことが繰り返されます。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOT CAUSE -->
+<section class="root">
+  <div class="sec-inner">
+    <div class="sec-eye">ROOT CAUSE</div>
+    <h2 class="sec-title">繰り返す理由は<br>3つの構造問題にある</h2>
+    <div class="divider"></div>
+    <div class="cause-grid">
+      <div class="cause-card"><div class="cause-num">CAUSE 01</div><div class="cause-title">「場当たり採用」が習慣化している</div><div class="cause-body">欠員が出てから求人を出す。応募が来れば採用する。この繰り返しでは、<em>採用コストは下がらず定着率も上がりません</em>。</div></div>
+      <div class="cause-card"><div class="cause-num">CAUSE 02</div><div class="cause-title">「離職の本当の理由」が把握できていない</div><div class="cause-body">「給料が低いから辞めた」と思っていても、実際は<em>職場環境や成長機会の欠如</em>が原因のことが多い。表面だけを見ていると対策がずれ続けます。</div></div>
+      <div class="cause-card"><div class="cause-num">CAUSE 03</div><div class="cause-title">「求人票」が選ばれる設計になっていない</div><div class="cause-body">業務内容と条件だけが書いてある求人票では、<em>働く人の声・職場の雰囲気・成長できる環境</em>が伝わらず、応募者は別の法人を選びます。</div></div>
+    </div>
+    <div class="insight-box"><p>採用で悩んでいる法人の多くは、<strong>「手法を変える」ことばかりに目を向けます</strong>。しかし変えるべきは手法ではなく、採用の<strong>「構造そのもの」</strong>です。</p></div>
+  </div>
+</section>
+
+<!-- LIMIT -->
+<section class="limit">
+  <div class="sec-inner">
+    <div class="sec-eye">LIMITED</div>
+    <h2 class="sec-title">伸びしろ調査は<br><em>限定10社のみ</em></h2>
+    <div class="divider"></div>
+    <div class="limit-box">
+      <div class="limit-head"><h3>注意！この調査は期間限定・10社のみ受付</h3></div>
+      <div class="limit-body">
+        <div class="limit-count"><div class="limit-num">10</div><div class="limit-unit">社限定・完全無料</div></div>
+        <ul class="limit-rules">
+          <li>通常は<strong>有償で提供している</strong>診断コンテンツです</li>
+          <li>この告知からのみ、<strong>無料でご提供</strong>しています</li>
+          <li><strong>定員に達し次第、予告なく受付を終了</strong>します</li>
+          <li>ここでしか申し込めません</li>
+        </ul>
+      </div>
+    </div>
+    <p class="limit-cta-txt"><strong>手に入らなくなる前に。</strong><br>費用も、契約も、不要です。このまますぐに依頼できます。</p>
+    <a href="#cta" class="btn-green">自社の伸びしろ調査を無料で依頼する →</a>
+  </div>
+</section>
+
+<!-- BENEFIT -->
+<section class="benefit">
+  <div class="sec-inner">
+    <div class="sec-eye">BENEFIT</div>
+    <h2 class="sec-title">調査をすると、何が変わるか</h2>
+    <div class="divider"></div>
+    <div class="benefit-grid">
+      <div class="benefit-card"><div class="benefit-ttl">「どこが問題か」が初めてわかる</div><div class="benefit-desc">なんとなく感じていた課題が、データと事例で言語化されます。現場と経営が同じ問題を共有できるようになります。</div></div>
+      <div class="benefit-card"><div class="benefit-ttl">「次の一手」に迷わなくなる</div><div class="benefit-desc">「何から変えればいいかわからない」状態から抜け出せます。明日から動ける具体的なアクションが見えます。</div></div>
+      <div class="benefit-card"><div class="benefit-ttl">現場が、楽になる</div><div class="benefit-desc">採用の繰り返し作業から抜け出し、仕組みで回る状態を作れます。兼務での採用業務の負担を減らせます。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="cta">
+  <div class="sec-inner" style="padding-left:20px;padding-right:20px;box-sizing:border-box;width:100%;max-width:100%;">
+    <div class="final-inner">
+      <div>
+        <div class="sec-eye">GET STARTED</div>
+        <h2 class="sec-title">まず、無料で<br>伸びしろ調査を依頼してください。</h2>
+        <div class="divider"></div>
+        <p class="sec-lead">費用も、契約も、不要です。依頼いただいた後、担当者からご連絡します。</p>
+      </div>
+      <div class="final-box">
+        <div class="final-box-head"><h3>限定10社・完全無料</h3></div>
+        <div class="final-box-body">
+          <a href="#" class="btn-green">自社の伸びしろ調査を無料で依頼する →</a>
+          <div class="final-warn"><strong>⚠ 限定10社・定員次第予告なく終了。</strong>このまますぐに依頼できます。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© SKETCH CO., LTD. ALL RIGHTS RESERVED.</p>
+  <p style="margin-top:6px;"><a href="#">プライバシーポリシー</a>　<a href="#">特定商取引法に基づく表記</a></p>
+</footer>
+
+</body>
+</html>

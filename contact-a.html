@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja" style="overflow-x:hidden;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>伸びしろ調査を無料で依頼する｜株式会社スケッチ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:"Noto Sans JP",sans-serif;background:#E8E4DE;color:#1A1A1A;-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%;}
+
+/* TOP BANNER */
+.top-banner{background:#C0392B;color:white;text-align:center;padding:10px 12px;font-size:clamp(11px,2.5vw,13px);font-weight:900;letter-spacing:0.02em;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+
+/* HERO */
+.hero{background:#F5C800;padding:48px 24px 40px;text-align:center;border-bottom:3px solid rgba(192,57,43,0.15);width:100%;box-sizing:border-box;}
+.hero-eye{font-size:clamp(10px,2vw,12px);font-weight:700;letter-spacing:.14em;color:rgba(26,26,26,0.5);text-transform:uppercase;margin-bottom:10px;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+.hero-title{font-family:"Noto Serif JP",serif;font-size:clamp(24px,6vw,46px);font-weight:700;color:#1A1A1A;line-height:1.35;margin-bottom:10px;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+.hero-title em{color:#C0392B;font-style:normal;}
+.hero-sub{font-size:clamp(13px,3vw,16px);color:rgba(26,26,26,0.6);line-height:1.8;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+
+/* SCARCITY BAR */
+.scarcity-bar{background:#1A1A1A;padding:12px 24px;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;width:100%;box-sizing:border-box;}
+.s-dot{width:8px;height:8px;border-radius:50%;background:#C0392B;flex-shrink:0;animation:blink 1.3s infinite;}
+.s-txt{font-size:clamp(11px,2.5vw,13px);font-weight:700;color:rgba(255,255,255,0.85);overflow-wrap:break-word;}
+.s-txt strong{color:#F5C800;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
+
+/* LAYOUT */
+.page-inner{max-width:720px;margin:0 auto;padding:48px 24px 80px;width:100%;box-sizing:border-box;}
+@media(max-width:768px){.page-inner{padding:32px 16px 80px;}}
+
+/* FORM CARD */
+.form-card{background:white;border:2.5px solid #1A1A1A;border-radius:12px;overflow:hidden;box-shadow:5px 5px 0 rgba(26,26,26,0.15);}
+.form-card-head{background:#1A1A1A;padding:18px 24px;text-align:center;}
+.form-card-head-txt{font-size:clamp(14px,3vw,17px);font-weight:900;color:#F5C800;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+.form-card-body{padding:32px 28px;}
+@media(max-width:480px){.form-card-body{padding:24px 16px;}}
+
+/* FORM FIELDS */
+.field{margin-bottom:22px;width:100%;box-sizing:border-box;}
+.field-label{font-size:clamp(12px,2.5vw,14px);font-weight:700;color:#1A1A1A;margin-bottom:7px;display:flex;align-items:center;gap:6px;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+.req{background:#C0392B;color:white;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0;}
+.opt{background:#AAA;color:white;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0;}
+.field input,
+.field textarea{width:100%;box-sizing:border-box;overflow-wrap:break-word;border:1.5px solid #D0CBC4;border-radius:7px;padding:12px 14px;font-family:"Noto Sans JP",sans-serif;font-size:clamp(14px,3vw,16px);color:#1A1A1A;background:#FAFAF8;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;}
+.field input:focus,
+.field textarea:focus{outline:none;border-color:#F5C800;box-shadow:0 0 0 3px rgba(245,200,0,0.2);}
+.field textarea{resize:vertical;min-height:120px;line-height:1.7;}
+
+/* PRIVACY */
+.privacy-row{display:flex;align-items:flex-start;gap:10px;background:#F5F2ED;border:1.5px solid #DDD8D0;border-radius:8px;padding:14px 16px;margin-bottom:24px;width:100%;box-sizing:border-box;}
+.privacy-row input[type="checkbox"]{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:#C0392B;cursor:pointer;}
+.privacy-row label{font-size:clamp(12px,2.5vw,13px);color:#555;line-height:1.7;overflow-wrap:break-word;}
+.privacy-row a{color:#C0392B;text-decoration:underline;}
+
+/* SUBMIT */
+.btn-submit{display:block;width:100%;box-sizing:border-box;overflow-wrap:break-word;background:#1E8A3C;color:white;font-family:"Noto Sans JP",sans-serif;font-size:clamp(15px,3.5vw,18px);font-weight:900;text-align:center;padding:18px;border-radius:8px;border:none;cursor:pointer;animation:pulse 2.8s infinite;transition:opacity .2s;}
+.btn-submit:hover{opacity:.9;}
+.btn-note{font-size:clamp(10px,2vw,11px);text-align:center;margin-top:8px;color:#999;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 4px 14px rgba(30,138,60,0.4)}50%{transform:scale(1.02);box-shadow:0 6px 22px rgba(30,138,60,0.55)}}
+
+/* REASSURE */
+.reassure{margin-top:28px;display:flex;flex-direction:column;gap:10px;width:100%;box-sizing:border-box;}
+.reassure-item{display:flex;align-items:flex-start;gap:10px;font-size:clamp(12px,2.5vw,14px);color:#555;line-height:1.6;overflow-wrap:break-word;}
+.reassure-icon{color:#1E8A3C;font-size:16px;flex-shrink:0;margin-top:1px;}
+
+/* THANKYOU */
+.thankyou{display:none;text-align:center;padding:48px 24px;width:100%;box-sizing:border-box;}
+.thankyou h2{font-family:"Noto Serif JP",serif;font-size:clamp(20px,5vw,28px);color:#1A1A1A;margin-bottom:14px;overflow-wrap:break-word;}
+.thankyou p{font-size:clamp(13px,3vw,15px);color:#555;line-height:1.85;overflow-wrap:break-word;}
+
+footer{background:#1A1A1A;color:rgba(255,255,255,0.35);font-size:11px;text-align:center;padding:22px 20px;width:100%;box-sizing:border-box;overflow-wrap:break-word;}
+footer a{color:inherit;}
+</style>
+</head>
+<body>
+
+<div class="top-banner">🎯 限定10社・無料｜自社の伸びしろ調査、今すぐ依頼できます</div>
+
+<div class="hero">
+  <div class="hero-eye">FREE APPLICATION</div>
+  <h1 class="hero-title">伸びしろ調査を<br><em>無料で依頼する</em></h1>
+  <p class="hero-sub">費用も、契約も、不要です。<br>依頼いただいた後、担当者からご連絡します。</p>
+</div>
+
+<div class="scarcity-bar">
+  <div class="s-dot"></div>
+  <p class="s-txt"><strong>限定10社・完全無料</strong>　定員に達し次第、予告なく受付を終了します</p>
+</div>
+
+<div class="page-inner">
+  <div class="form-card">
+    <div class="form-card-head">
+      <div class="form-card-head-txt">📋 無料調査の依頼フォーム</div>
+    </div>
+    <div class="form-card-body">
+
+      <!-- Formspreeにあなたのフォームを登録し、下記のaction URLを更新してください -->
+      <!-- 登録先: https://formspree.io → 新規フォーム作成 → info@sketch-consulting.co.jp で登録 -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <!-- Formspreeでメール送信先を指定 -->
+        <input type="hidden" name="_replyto" value="info@sketch-consulting.co.jp">
+        <input type="hidden" name="_subject" value="【伸びしろ調査】無料依頼が届きました">
+
+        <div class="field">
+          <div class="field-label"><span>法人名</span><span class="req">必須</span></div>
+          <input type="text" name="法人名" placeholder="例：医療法人○○会" required>
+        </div>
+
+        <div class="field">
+          <div class="field-label"><span>お名前</span><span class="req">必須</span></div>
+          <input type="text" name="お名前" placeholder="例：山田 花子" required>
+        </div>
+
+        <div class="field">
+          <div class="field-label"><span>お名前（フリガナ）</span><span class="req">必須</span></div>
+          <input type="text" name="フリガナ" placeholder="例：ヤマダ ハナコ" required>
+        </div>
+
+        <div class="field">
+          <div class="field-label"><span>役職</span><span class="opt">任意</span></div>
+          <input type="text" name="役職" placeholder="例：施設長、採用担当">
+        </div>
+
+        <div class="field">
+          <div class="field-label"><span>電話番号</span><span class="opt">任意</span></div>
+          <input type="tel" name="電話番号" placeholder="例：03-0000-0000">
+        </div>
+
+        <div class="field">
+          <div class="field-label"><span>メールアドレス</span><span class="req">必須</span></div>
+          <input type="email" name="メールアドレス" placeholder="例：info@example.com" required>
+        </div>
+
+        <div class="field">
+          <div class="field-label"><span>ご質問・ご要望</span><span class="opt">任意</span></div>
+          <textarea name="ご質問・ご要望" placeholder="採用に関してお困りのことや、調査に関するご質問など、ご自由にお書きください。"></textarea>
+        </div>
+
+        <div class="privacy-row">
+          <input type="checkbox" id="privacy" name="プライバシーポリシー同意" value="同意する" required>
+          <label for="privacy"><a href="https://sketch-consulting.co.jp/privacy-policy/" target="_blank">プライバシーポリシー</a>に同意します（必須）</label>
+        </div>
+
+        <button type="submit" class="btn-submit">自社の伸びしろ調査を無料で依頼する →</button>
+        <div class="btn-note">送信後、担当者より2営業日以内にご連絡します</div>
+
+      </form>
+
+      <div class="thankyou" id="thankyou">
+        <h2>✅ ご依頼ありがとうございます</h2>
+        <p>担当者より2営業日以内に、<br>ご登録のメールアドレスへご連絡します。<br><br>今しばらくお待ちください。</p>
+      </div>
+
+      <div class="reassure">
+        <div class="reassure-item"><span class="reassure-icon">✓</span><span>費用は一切かかりません。契約を迫ることもありません。</span></div>
+        <div class="reassure-item"><span class="reassure-icon">✓</span><span>個人情報は調査目的のみに使用し、第三者への提供はしません。</span></div>
+        <div class="reassure-item"><span class="reassure-icon">✓</span><span>依頼後に不要と感じた場合は、いつでもキャンセルできます。</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© SKETCH CO., LTD. ALL RIGHTS RESERVED.</p>
+  <p style="margin-top:6px;"><a href="https://sketch-consulting.co.jp/privacy-policy/" target="_blank">プライバシーポリシー</a>　<a href="#">特定商取引法に基づく表記</a></p>
+</footer>
+
+<script>
+const form = document.getElementById('contactForm');
+const thankyou = document.getElementById('thankyou');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      thankyou.style.display = 'block';
+    } else {
+      alert('送信に失敗しました。時間をおいて再度お試しください。');
+    }
+  } catch(err) {
+    alert('通信エラーが発生しました。時間をおいて再度お試しください。');
+  }
+});
+</script>
+
+</body>
+</html>
